@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Delícias da Vovó - Produtos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <h1 class="logo">Delícias da Vovó</h1>
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html#home">Início</a></li>
+          <li><a href="produtos.html" class="active">Produtos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <main class="produtos-page">
+    <div class="container">
+      <h2>Nossos Produtos</h2>
+      <div class="grid">
+        <div class="card" tabindex="0">
+          <img src="img/bolo-chocolate.jpg" alt="Bolo de Chocolate" />
+          <div class="product-info">
+            <h3>Bolo de Chocolate</h3>
+            <p>Feito com chocolate 70% cacau, cremoso e irresistível.</p>
+            <div class="price">R$ 50,00</div>
+            <button class="order-btn" data-produto="Bolo de Chocolate">Fazer Pedido</button>
+          </div>
+        </div>
+        <div class="card" tabindex="0">
+          <img src="img/brigadeiro.webp" alt="Brigadeiro Gourmet" />
+          <div class="product-info">
+            <h3>Brigadeiro Gourmet</h3>
+            <p>Leite condensado, manteiga e chocolate de verdade.</p>
+            <div class="price">R$ 3,50 cada</div>
+            <button class="order-btn" data-produto="Brigadeiro Gourmet">Fazer Pedido</button>
+          </div>
+        </div>
+        <div class="card" tabindex="0">
+          <img src="img/Cheesecake-Morango.webp" alt="Cheesecake de Morango" />
+          <div class="product-info">
+            <h3>Cheesecake de Morango</h3>
+            <p>Base crocante com cobertura fresca de morango.</p>
+            <div class="price">R$ 45,00</div>
+            <button class="order-btn" data-produto="Cheesecake de Morango">Fazer Pedido</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal de pedido -->
+  <div class="modal-overlay" id="modalPedido">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+      <button class="modal-close" id="modalClose" aria-label="Fechar">&times;</button>
+      <h3 id="modalTitle">Faça seu pedido</h3>
+      <form id="pedidoForm" class="pedido-form" novalidate>
+        <p id="produtoSelecionado"></p>
+
+        <label for="nomePedido">Nome *</label>
+        <input type="text" id="nomePedido" name="nomePedido" placeholder="Seu nome" required />
+
+        <label for="emailPedido">Email *</label>
+        <input type="email" id="emailPedido" name="emailPedido" placeholder="Seu email" required />
+
+        <label for="quantidadePedido">Quantidade *</label>
+        <input type="number" id="quantidadePedido" name="quantidadePedido" min="1" value="1" required />
+
+        <label for="mensagemPedido">Observações (opcional)</label>
+        <textarea id="mensagemPedido" name="mensagemPedido" rows="3" placeholder="Ex.: Sem açúcar, entrega até sábado"></textarea>
+
+        <button type="submit" class="enviar-btn">Enviar Pedido</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; 2025 Delícias da Vovó. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

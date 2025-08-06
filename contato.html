@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Delícias da Vovó - Contato</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <h1 class="logo">Delícias da Vovó</h1>
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html#home">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="contato.html" class="active">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <main class="contato-page">
+    <div class="container">
+      <h2>Fale Conosco</h2>
+      <p class="subtitulo">Entre em contato para encomendas, dúvidas ou eventos. Estamos prontos para adoçar seu dia!</p>
+
+      <form id="contatoForm" class="contato-form" novalidate>
+        <label for="nomeContato">Nome *</label>
+        <input type="text" id="nomeContato" name="nomeContato" placeholder="Seu nome" required />
+
+        <label for="emailContato">Email *</label>
+        <input type="email" id="emailContato" name="emailContato" placeholder="Seu email" required />
+
+        <label for="telefoneContato">Telefone (opcional)</label>
+        <input type="tel" id="telefoneContato" name="telefoneContato" placeholder="(xx) xxxx-xxxx" pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}" />
+
+        <label for="mensagemContato">Mensagem *</label>
+        <textarea id="mensagemContato" name="mensagemContato" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+
+        <button type="submit" class="btn enviar-btn">Enviar Mensagem</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; 2025 Delícias da Vovó. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Validação e alerta simples para contato
+    const contatoForm = document.getElementById('contatoForm');
+    contatoForm.addEventListener('submit', e => {
+      e.preventDefault();
+
+      if (!contatoForm.checkValidity()) {
+        contatoForm.reportValidity();
+        return;
+      }
+
+      alert(`Obrigado, ${contatoForm.nomeContato.value}! Sua mensagem foi enviada com sucesso.`);
+      contatoForm.reset();
+    });
+  </script>
+</body>
+</html>
