@@ -1,29 +1,23 @@
-# Fernando Reys
+# Reys Doces
 
-<p align="center">
-  <strong>Estudante de Análise e Desenvolvimento de Sistemas · Desenvolvedor em formação</strong>
-</p>
+Landing page responsiva para uma confeitaria, criada para apresentar produtos, fortalecer a marca e facilitar o contato com clientes.
 
-## Sobre mim
+## Demonstração
 
-Tenho 21 anos e sou estudante de Análise e Desenvolvimento de Sistemas pela UFBRA. Gosto de transformar ideias em sites e aplicações com interfaces claras, responsivas e funcionais.
+[Visitar o site publicado](https://reys-doces.reisfernando369.chatgpt.site)
 
-Atualmente estudo e desenvolvo projetos usando HTML, CSS, JavaScript, React, Next.js, Supabase e Vercel.
+## O projeto inclui
 
-## Sites e projetos
+- Vitrine de bolos e doces
+- Seção de contato
+- Atalhos para Instagram e WhatsApp
+- Design adaptado para celular e desktop
+- Estrutura pensada para pequenos negócios
 
-- 🍰 [Reys Doces — site da confeitaria](https://reys-doces.reisfernando369.chatgpt.site)
-- 🧁 [Repositório do site Reys Doces](https://github.com/FernandoReys/site-confeitaria)
-- ⚖️ [Fernando Reis Advocacia](https://github.com/FernandoReys/fernando-reis-advocacia)
-- 💈 [Nando Barber Shop](https://github.com/FernandoReys/nando-barber-shop)
-- 🚗 [Site Carros](https://github.com/FernandoReys/site-carros)
-- 🤝 [Projeto Social](https://github.com/FernandoReys/projeto-social)
-- 📜 [Projeto Cordel](https://github.com/FernandoReys/projeto-cordel)
+## Tecnologias
 
-## Objetivo
-
-Criar experiências digitais profissionais para pequenos negócios, marcas pessoais e projetos autorais.
+`HTML` · `CSS` · `JavaScript` · `React`
 
 ---
 
-<p align="center">Feito por Fernando Reys · Brasil</p>
+Desenvolvido por [Fernando Reys](https://github.com/FernandoReys) · Estudante de Análise e Desenvolvimento de Sistemas
