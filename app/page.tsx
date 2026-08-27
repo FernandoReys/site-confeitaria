@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 
 type Category = "Todos" | "Chocolate" | "Brancos" | "Caseiros" | "Doces";
 
@@ -41,6 +41,14 @@ const products = [
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState<Category>("Todos");
   const [sent, setSent] = useState(false);
+  const [headerScrolled, setHeaderScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateHeader = () => setHeaderScrolled(window.scrollY > 20);
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    return () => window.removeEventListener("scroll", updateHeader);
+  }, []);
 
   const visibleProducts = products.filter(
     (product) => activeCategory === "Todos" || product.category === activeCategory,
@@ -53,7 +61,7 @@ export default function Home() {
 
   return (
     <main>
-      <header className="site-header">
+      <header className={`site-header${headerScrolled ? " is-scrolled" : ""}`}>
         <a className="brand" href="#inicio" aria-label="Reys Doces, voltar ao início">
           <span className="brand-mark">R</span>
           <span><strong>Reys Doces</strong><small>confeitaria artesanal</small></span>
